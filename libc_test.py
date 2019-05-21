@@ -12,8 +12,8 @@ def mallocEntry(threadId):
 def memcpyEntry(threadId):
     print('[!] memcpy() found')
 
-def strcpyEntry(threadId):
-    print('[!] strcpy() found')
+def strlenEntry(threadId):
+    print('[!] strlen() found')
 
 def strncpyEntry(threadId):
     print('[!] strncpy() found')
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     insertCall(   freeEntry, INSERT_POINT.ROUTINE_ENTRY, "free")
     insertCall( mallocEntry, INSERT_POINT.ROUTINE_ENTRY, "malloc")
     insertCall( memcpyEntry, INSERT_POINT.ROUTINE_ENTRY, "memcpy")
-    insertCall( strcpyEntry, INSERT_POINT.ROUTINE_ENTRY, "strcpy")
+    insertCall( strlenEntry, INSERT_POINT.ROUTINE_ENTRY, "strlen")
     insertCall(strncpyEntry, INSERT_POINT.ROUTINE_ENTRY, "strncpy")
     insertCall(   putsEntry, INSERT_POINT.ROUTINE_ENTRY, "puts")
     insertCall( printfEntry, INSERT_POINT.ROUTINE_ENTRY, "printf")

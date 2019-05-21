@@ -17,7 +17,7 @@ It contains following symbols, symbols which were not successfully hooked are ma
                  U memcpy@@GLIBC_2.14         NOT FOUND
                  U printf@@GLIBC_2.2.5
                  U puts@@GLIBC_2.2.5
-                 U strlen@@GLIBC_2.2.5        NOT FOUND
+                 U strlen@@GLIBC_2.2.5
                  U strncpy@@GLIBC_2.2.5       NOT FOUND
 ```
 
@@ -27,9 +27,11 @@ It contains following symbols, symbols which were not successfully hooked are ma
 ```
 ~/libc_test$ sudo ../triton ./libc_test.py ./sample.elf 
 [!] malloc() found
+[!] strlen() found
 [!] puts() found
+[!] strlen() found
 [!] malloc() found
-Hallo Welt!
+Hallo
 [!] printf() found
 1
 [!] free() found
